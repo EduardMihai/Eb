@@ -19,6 +19,7 @@ add_executable(MyProject main.cpp)
 target_link_libraries(MyProject PRIVATE say-hello-static)
 target_link_libraries(MyProject PRIVATE say-hello-shared)
 
+target_include_directories(MyProject PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
